@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 ##   Retrieve a page of pull requests in the current repository that contain the given commit.   
 ##  Details: https://docs.atlassian.com/bitbucket-server/rest/6.1.2/bitbucket-rest.html#idp206
 echo "Get PRs ==> /rest/api/1.0/projects/${PROJECT_KEY}/repos/${REPOSITORY}/commits/${COMMIT_ID}/pull-requests"
