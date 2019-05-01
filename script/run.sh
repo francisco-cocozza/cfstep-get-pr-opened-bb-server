@@ -14,9 +14,10 @@ else
     echo "No Prs found for that commit"
 fi
 
-## Export the var locally and at CF level
+## Export the var locally and at CF level (only if running in a cf_build)
 export PR_ID=${PR_ID}
 if [ "$CF_URL" != "" ]; then
+    cd ${{CF_VOLUME_PATH}}
     cf_export PR_ID
 fi
 
