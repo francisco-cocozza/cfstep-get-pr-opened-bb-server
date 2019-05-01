@@ -17,7 +17,6 @@ fi
 ## Export the var locally and at CF level (only if running in a cf_build)
 export PR_ID=${PR_ID}
 if [ "$CF_URL" != "" ]; then
-    cd ${CF_VOLUME_PATH}
-    cf_export PR_ID
+    echo PR_ID=${PR_ID} >> ${CF_VOLUME_PATH}/env_vars_to_export
 fi
 
